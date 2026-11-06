@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENGLISH LEVEL II - Recursos de Clase</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        uni: {
+                            navy: '#0f2c59',
+                            royal: '#1e56a0',
+                            gold: '#f8b400',
+                            goldHover: '#e0a000',
+                            slate: '#f4f6f9',
+                            darkBg: '#091527',
+                            darkCard: '#13233c',
+                            darkBorder: '#1e385c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .resource-btn {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .resource-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-uni-slate text-slate-800 dark:bg-uni-darkBg dark:text-slate-100 min-h-screen flex flex-col selection:bg-uni-gold selection:text-uni-navy">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-40 bg-uni-navy text-white shadow-lg border-b-4 border-uni-gold">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+            
+            <!-- Logo & Title -->
+            <div class="flex items-center space-x-3 text-center sm:text-left">
+                <div class="w-12 h-12 rounded-2xl bg-uni-gold text-uni-navy font-black text-2xl flex items-center justify-center shadow-md transform hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight">ENGLISH LEVEL II</h1>
+                    <div class="flex items-center gap-2 justify-center sm:justify-start">
+                        <span class="text-xs bg-uni-royal text-blue-100 font-bold px-2.5 py-0.5 rounded-full border border-blue-400/30">
+                            Plataforma de Recursos
+                        </span>
+                        <span class="text-xs text-uni-gold font-medium hidden md:inline">
+                            <i class="fa-solid fa-university mr-1"></i>UDENAR
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Controls -->
+            <div class="flex items-center gap-3">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-sm active:scale-95" title="Cambiar Tema (Día/Noche)">
+                    <i id="theme-icon" class="fa-solid fa-moon text-uni-gold text-base"></i>
+                    <span id="theme-text" class="hidden sm:inline">Modo Noche</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-1 max-w-5xl w-full mx-auto px-4 py-8 space-y-10">
+
+        <!-- BANNER DE BIENVENIDA -->
+        <section class="bg-gradient-to-r from-uni-navy via-uni-royal to-blue-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden border border-blue-800/40">
+            <div class="absolute -right-10 -bottom-10 opacity-10 text-white">
+                <i class="fa-solid fa-book-open text-9xl"></i>
+            </div>
+            <div class="relative z-10 max-w-2xl space-y-3">
+                <span class="bg-uni-gold text-uni-navy font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                    Semestre Académico B-2026
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black leading-tight">
+                    Recursos: Test Unit 4 - Class Unit 5
+                </h2>
+                <p class="text-sm text-blue-100/90 leading-relaxed">
+                    Accede a todos los contenidos
+                </p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 1: TEST UNIT 4 -->
+        <section class="space-y-4">
+            <div class="flex items-center gap-3 border-b-2 border-uni-gold/40 pb-2">
+                <div class="w-8 h-8 rounded-lg bg-uni-gold/20 text-uni-gold flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-vial-circle-check"></i>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-uni-navy dark:text-uni-gold tracking-wide">
+                    TEST UNIT 4
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Video Explicación Card -->
+                <div class="bg-white dark:bg-uni-darkCard rounded-2xl p-6 shadow-md border border-slate-200 dark:border-uni-darkBorder hover:shadow-xl transition-all flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 flex items-center justify-center text-xl font-bold shadow-inner">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+                                Video Explicativo
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800 dark:text-slate-100 group-hover:text-uni-royal dark:group-hover:text-uni-gold transition-colors">
+                                Explicación del Test Unit 4
+                            </h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                Video instructivo con orientaciones previas a la evaluación.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-2">
+                        <button onclick="openResource('test_video')" class="resource-btn flex-1 bg-uni-royal hover:bg-uni-navy text-white font-bold py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-play text-xs"></i> <span>Ver Video</span>
+                        </button>
+                        <button onclick="editResource('test_video', 'Video Explicación del Test Unit 4')" class="p-2.5 text-slate-400 hover:text-uni-gold hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all" title="Configurar Enlace">
+                            <i class="fa-solid fa-link"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Test Card -->
+                <div class="bg-white dark:bg-uni-darkCard rounded-2xl p-6 shadow-md border-2 border-uni-gold/40 dark:border-uni-gold/30 hover:shadow-xl transition-all flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-uni-gold text-uni-navy text-[10px] font-black uppercase px-3 py-1 rounded-bl-xl shadow">
+                        Evaluación
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-uni-gold flex items-center justify-center text-xl font-bold shadow-inner">
+                                <i class="fa-solid fa-pen-clip"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800 dark:text-slate-100 group-hover:text-uni-royal dark:group-hover:text-uni-gold transition-colors">
+                                Test Unit 4
+                            </h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                Cuestionario interactivo de la Unidad 4.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-2">
+                        <button onclick="openResource('test_link')" class="resource-btn flex-1 bg-uni-gold hover:bg-uni-goldHover text-uni-navy font-black py-2.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-paper-plane text-xs"></i> <span>Realizar Test</span>
+                        </button>
+                        <button onclick="editResource('test_link', 'Enlace al Test Unit 4')" class="p-2.5 text-slate-400 hover:text-uni-gold hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all" title="Configurar Enlace">
+                            <i class="fa-solid fa-link"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CLASE UNIT 5 -->
+        <section class="space-y-6">
+            <div class="flex items-center gap-3 border-b-2 border-uni-gold/40 pb-2">
+                <div class="w-8 h-8 rounded-lg bg-uni-royal text-white flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-uni-navy dark:text-uni-gold tracking-wide">
+                    CLASE UNIT 5
+                </h2>
+            </div>
+
+            <!-- SUBSECCIÓN #DISCOVER -->
+            <div class="bg-white dark:bg-uni-darkCard rounded-3xl p-6 shadow-md border border-slate-200 dark:border-uni-darkBorder space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
+                    <div class="flex items-center gap-2">
+                        <span class="text-lg font-black text-uni-royal dark:text-blue-400">#DISCOVER</span>
+                        <span class="text-xs bg-blue-50 dark:bg-blue-950/60 text-uni-royal dark:text-blue-300 font-semibold px-2.5 py-0.5 rounded-full">
+                            Fase 1 - Descubrimiento
+                        </span>
+                    </div>
+                    <i class="fa-solid fa-compass text-uni-royal/30 dark:text-blue-400/30 text-2xl"></i>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Link: Video clase Primera parte -->
+                    <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between space-y-3 hover:border-uni-royal dark:hover:border-blue-500 transition-all">
+                        <div class="space-y-2">
+                            <div class="text-red-500 text-lg">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Video de la Clase - Primera parte</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Primera parte de la clase - Páginas 80 - 81</p>
+                        </div>
+                        <div class="flex items-center gap-1.5 pt-2">
+                            <button onclick="openResource('u5_video1')" class="resource-btn flex-1 bg-uni-royal hover:bg-uni-navy text-white text-xs font-bold py-2 rounded-lg flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-circle-play"></i> Abrir
+                            </button>
+                            <button onclick="editResource('u5_video1', 'Video clase - Primera parte')" class="p-1.5 text-slate-400 hover:text-uni-gold rounded-lg text-xs" title="Editar URL">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Link: Video Book -->
+                    <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between space-y-3 hover:border-uni-royal dark:hover:border-blue-500 transition-all">
+                        <div class="space-y-2">
+                            <div class="text-indigo-500 text-lg">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Video Book</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">#DISCOVER - While you watch - Activity 3 - 4 </p>
+                        </div>
+                        <div class="flex items-center gap-1.5 pt-2">
+                            <button onclick="openResource('u5_videobook')" class="resource-btn flex-1 bg-uni-royal hover:bg-uni-navy text-white text-xs font-bold py-2 rounded-lg flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-book"></i> Abrir
+                            </button>
+                            <button onclick="editResource('u5_videobook', 'Video Book Unit 5')" class="p-1.5 text-slate-400 hover:text-uni-gold rounded-lg text-xs" title="Editar URL">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Link: Audio 1 -->
+                    <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between space-y-3 hover:border-uni-royal dark:hover:border-blue-500 transition-all">
+                        <div class="space-y-2">
+                            <div class="text-emerald-500 text-lg">
+                                <i class="fa-solid fa-headphones"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Audio 1</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">#DISCOVER - Vocabulary - Types of School - Activity 6</p>
+                        </div>
+                        <div class="flex items-center gap-1.5 pt-2">
+                            <button onclick="openResource('u5_audio1')" class="resource-btn flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-lg flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-music"></i> Escuchar
+                            </button>
+                            <button onclick="editResource('u5_audio1', 'Audio 1 Unit 5')" class="p-1.5 text-slate-400 hover:text-uni-gold rounded-lg text-xs" title="Editar URL">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Link: Audio 2 -->
+                    <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between space-y-3 hover:border-uni-royal dark:hover:border-blue-500 transition-all">
+                        <div class="space-y-2">
+                            <div class="text-emerald-500 text-lg">
+                                <i class="fa-solid fa-headphones"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Audio 2</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">#DISCOVER - Vocabulary - Check your answers - Activity 9</p>
+                        </div>
+                        <div class="flex items-center gap-1.5 pt-2">
+                            <button onclick="openResource('u5_audio2')" class="resource-btn flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-lg flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-music"></i> Escuchar
+                            </button>
+                            <button onclick="editResource('u5_audio2', 'Audio 2 Unit 5')" class="p-1.5 text-slate-400 hover:text-uni-gold rounded-lg text-xs" title="Editar URL">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUBSECCIÓN #CLARIFY -->
+            <div class="bg-white dark:bg-uni-darkCard rounded-3xl p-6 shadow-md border border-slate-200 dark:border-uni-darkBorder space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
+                    <div class="flex items-center gap-2">
+                        <span class="text-lg font-black text-amber-500">#CLARIFY</span>
+                        <span class="text-xs bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 font-semibold px-2.5 py-0.5 rounded-full">
+                            Parte 2 - Lectura y Escucha
+                        </span>
+                    </div>
+                    <i class="fa-solid fa-lightbulb text-amber-500/30 text-2xl"></i>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Link: Video clase Segunda parte -->
+                    <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between space-y-3 hover:border-amber-500 transition-all">
+                        <div class="space-y-2">
+                            <div class="text-red-500 text-lg">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Video de la Clase - Segunda Parte</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Explicación: Reading and Listening</p>
+                        </div>
+                        <div class="flex items-center gap-1.5 pt-2">
+                            <button onclick="openResource('u5_video2')" class="resource-btn flex-1 bg-uni-navy dark:bg-uni-royal hover:bg-slate-800 text-white text-xs font-bold py-2.5 rounded-lg flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-circle-play"></i> Ver Segunda Parte
+                            </button>
+                            <button onclick="editResource('u5_video2', 'Video clase - Segunda parte')" class="p-1.5 text-slate-400 hover:text-uni-gold rounded-lg text-xs" title="Editar URL">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Link: Audio 3 -->
+                    <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between space-y-3 hover:border-amber-500 transition-all">
+                        <div class="space-y-2">
+                            <div class="text-emerald-500 text-lg">
+                                <i class="fa-solid fa-file-audio"></i>
+                            </div>
+                            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Audio 3</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Audio</p>
+                        </div>
+                        <div class="flex items-center gap-1.5 pt-2">
+                            <button onclick="openResource('u5_audio3')" class="resource-btn flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2.5 rounded-lg flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-volume-high"></i> Escuchar Audio 3
+                            </button>
+                            <button onclick="editResource('u5_audio3', 'Audio 3 Unit 5')" class="p-1.5 text-slate-400 hover:text-uni-gold rounded-lg text-xs" title="Editar URL">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-uni-navy text-slate-300 border-t border-blue-950 py-6 px-4 mt-auto">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 text-xs">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-uni-gold">ENGLISH LEVEL II</span>
+                <span>•</span>
+                <span>Recursos Didácticos</span>
+            </div>
+            <div class="text-slate-400">
+                Created by Jorge Delgado
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE CONFIGURACIÓN DE URL -->
+    <div id="url-modal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-uni-darkCard border border-slate-200 dark:border-uni-darkBorder rounded-3xl max-w-md w-full p-6 shadow-2xl space-y-4">
+            <div class="flex justify-between items-center">
+                <h3 id="modal-resource-title" class="text-lg font-bold text-uni-navy dark:text-uni-gold">
+                    Configurar Enlace
+                </h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+                Pega la URL de tu recurso (YouTube, Google Drive, OneDrive, etc.) para vincularlo a este botón:
+            </p>
+            <div>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">URL del Recurso:</label>
+                <input type="url" id="modal-url-input" placeholder="https://ejemplo.com/mi-recurso" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-uni-royal">
+            </div>
+            <div class="flex gap-2 pt-2">
+                <button onclick="saveResourceUrl()" class="flex-1 bg-uni-royal hover:bg-uni-navy text-white font-bold py-2.5 rounded-xl text-xs transition-all shadow">
+                    Guardar Enlace
+                </button>
+                <button onclick="resetResourceUrl()" class="px-4 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 font-bold py-2.5 rounded-xl text-xs transition-all">
+                    Resetear
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Default Links Repository
+        const defaultLinks = {
+            'test_video': 'https://drive.google.com/file/d/19ZtTWlsAktax2vIIopONP7ZxWcAKkH3r/view?usp=sharing',
+            'test_link': 'https://docs.google.com/forms/d/e/1FAIpQLSdt6nmylDn52JJzgSydoGbsNuCqiZm93gpqOuG1-Y-oXJ-gCA/viewform?usp=sharing&ouid=101842400372205256209',
+            'u5_video1': 'https://drive.google.com/file/d/16867T-J4sdfaTFTAwe-x4_xsWlQrn-VM/view?usp=sharing',
+            'u5_videobook': 'https://vimeo.com/719279924/a6a9b5c127',
+            'u5_audio1': 'https://drive.google.com/file/d/1_q3YpPU0nG7A_c7fvD0nODRS2AFN0DJ7/view?usp=sharing',
+            'u5_audio2': 'https://drive.google.com/file/d/154hZy7fSmT4EdKIEsqpbN8PE1Bb1aKXB/view?usp=sharing',
+            'u5_video2': 'https://drive.google.com/file/d/1DjjvXwofLIlkBZR0_00dozRfEbrvK8rr/view?usp=sharing',
+            'u5_audio3': 'https://drive.google.com/file/d/1_2R9jyXIMpoXnFVgY4LFzhjMbOhoioEt/view?usp=sharing'
+        };
+
+        let currentEditingKey = null;
+
+        // Load link from localStorage or default
+        function getLink(key) {
+            return localStorage.getItem('eng2_link_' + key) || defaultLinks[key] || '#';
+        }
+
+        // Open Resource Link
+        function openResource(key) {
+            const url = getLink(key);
+            if (url && url !== '#') {
+                window.open(url, '_blank');
+            } else {
+                alert('No hay un enlace configurado para este recurso. Usa el botón de configuración para agregar uno.');
+            }
+        }
+
+        // Edit Link Modal
+        function editResource(key, title) {
+            currentEditingKey = key;
+            document.getElementById('modal-resource-title').innerText = 'Configurar: ' + title;
+            document.getElementById('modal-url-input').value = getLink(key);
+            document.getElementById('url-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('url-modal').classList.add('hidden');
+            currentEditingKey = null;
+        }
+
+        function saveResourceUrl() {
+            if (!currentEditingKey) return;
+            const inputVal = document.getElementById('modal-url-input').value.trim();
+            if (inputVal) {
+                localStorage.setItem('eng2_link_' + currentEditingKey, inputVal);
+            }
+            closeModal();
+        }
+
+        function resetResourceUrl() {
+            if (!currentEditingKey) return;
+            localStorage.removeItem('eng2_link_' + currentEditingKey);
+            document.getElementById('modal-url-input').value = defaultLinks[currentEditingKey] || '';
+            closeModal();
+        }
+
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeIcon.className = 'fa-solid fa-moon text-uni-gold text-base';
+                themeText.innerText = 'Modo Noche';
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.className = 'fa-solid fa-sun text-uni-gold text-base';
+                themeText.innerText = 'Modo Día';
+            }
+        }
+
+        // Load User Preferred Theme
+        (function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-sun text-uni-gold text-base';
+                themeText.innerText = 'Modo Día';
+            } else {
+                html.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-moon text-uni-gold text-base';
+                themeText.innerText = 'Modo Noche';
+            }
+        })();
+    </script>
+</body>
+</html>
